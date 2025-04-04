@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <audio src="midia/royalty.mp3" controls autoplay loop></audio>
+    <audio preload="metadata" controls loop> <!--os comandos de preload indicam quanto o navegador terá qu baixar do áudio para poder rodá-lo, sendo o 'none' nada; 'metadata' apenas alguns detalhes; e 'auto' sendo o aquivo integral-->
+        <source src="midia/royalty.mp3" type="audio/mpeg">
+        <source src="midia/royalty.ogg" type="audio/ogg">
+        <source src="midia/royalty.wav" type="audio/wav"> <!--tente evitar ao máximo os aquivos wave devido ao seu tamanho exorbitante-->
+        <p>Caso não reproduza os áudios, infelizmente seu navegador não consegue. <a href="midia/royalty.mp3">Clique aqui</a> para baixar a música</p> <!--caso não rode nenhum aúdio, aparecerá essa mensagem-->
+</body>
+    </audio>
+</html>

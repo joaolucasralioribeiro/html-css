@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; /*Fonte segura, pra todos os dispositivos conseguirem ler*/
+            /*
+            Medida Absolutas
+            cm, mm, in (polegada), px, pt, pc
+
+            Medidas Relativas
+            em, ex, rem, vw (largura da viewport, da tela), vh, %
+                A recomendação da W3C é usar APENAS px e em
+            */
+            font-size: 1em; /* GERALMENTE 16px = 1em */
+            font-weight: normal;
+            /* Para os pesos da fonte temos: lighter, normal, bold, bolder */
+            font-style: italic;
+            text-decoration: underline;
+        }
+        h2{
+            font: italic bold 3em 'Times New Roman';
+            /* É possível condensar as quatro característica em: font. Porém temos que seguir a ordem: style -> wight -> size -> family */
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1> 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione velit consequatur fugiat at esse quo et aliquid hic, cumque molestiae deleniti nemo, recusandae aperiam ad porro iste iusto eum! Minima! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, optio labore. Harum, accusamus quis impedit sint sapiente iusto voluptate et. Harum, commodi voluptatibus nihil facilis quod error cupiditate vel consectetur!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eveniet doloribus, quod repudiandae cumque esse cum vel iure ducimus sequi animi, ratione saepe sunt dignissimos ab recusandae, dolores commodi magnam.
+    </p>
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum delectus nesciunt optio dolor veniam sit laudantium rem sunt, facilis numquam explicabo libero debitis est culpa quam nulla ad quia repudiandae!</p>
+</body>
+</html>
