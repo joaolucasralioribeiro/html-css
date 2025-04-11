@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         th, td {
@@ -19,9 +20,31 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: rgb(38, 38, 38);
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(38, 38, 38);
+        }
+
+        tbody > tr:nth-child(odd) { /* 2n-1 */
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(even) { /* 2n */
+            /* nth-child(xn-x=quant. de linhas para repetir / odd-ímpares), pseudo-classe que indica de quantas em quantas linhas o estilo irá se repetir */
+            background-color: lightgray;
         }
 
         td.num {
@@ -41,10 +64,12 @@
             TR, TH, TD
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+                <!--scope="col"> título da coluna, puramente semântico, sem resultado visual-->
             </tr>
         </thead>
         <tbody>
@@ -158,10 +183,15 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th> <!--scope="row" > título da linha, puramente semântico, sem resultado visual-->
                 <td><strong>212 583 750</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At repudiandae veniam ex neque delectus dolorum quos voluptatem ut fuga, eaque perferendis recusandae labore rerum, facilis ipsa reiciendis assumenda vitae ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rerum doloribus neque dolorum est perspiciatis laudantium minima, delectus molestias ipsum aliquid aperiam magni repudiandae nam maiores. Ipsam debitis harum vel! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, voluptates dolorem similique eligendi reiciendis quam tempora quia obcaecati rerum rem velit quisquam assumenda laborum sequi autem sit sed ipsa tenetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab asperiores minus possimus cum soluta nostrum rem. Hic sequi, facere deserunt minus in saepe labore, temporibus expedita corrupti atque doloribus odit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quo eius assumenda quasi rerum inventore iure eveniet, molestias quas. Ipsam et quae quasi error odit consequuntur, voluptatum corrupti dicta rerum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At repudiandae veniam ex neque delectus dolorum quos voluptatem ut fuga, eaque perferendis recusandae labore rerum, facilis ipsa reiciendis assumenda vitae ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rerum doloribus neque dolorum est perspiciatis laudantium minima, delectus molestias ipsum aliquid aperiam magni repudiandae nam maiores. Ipsam debitis harum vel! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, voluptates dolorem similique eligendi reiciendis quam tempora quia obcaecati rerum rem velit quisquam assumenda laborum sequi autem sit sed ipsa tenetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab asperiores minus possimus cum soluta nostrum rem. Hic sequi, facere deserunt minus in saepe labore, temporibus expedita corrupti atque doloribus odit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quo eius assumenda quasi rerum inventore iure eveniet, molestias quas. Ipsam et quae quasi error odit consequuntur, voluptatum corrupti dicta rerum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At repudiandae veniam ex neque delectus dolorum quos voluptatem ut fuga, eaque perferendis recusandae labore rerum, facilis ipsa reiciendis assumenda vitae ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rerum doloribus neque dolorum est perspiciatis laudantium minima, delectus molestias ipsum aliquid aperiam magni repudiandae nam maiores. Ipsam debitis harum vel! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, voluptates dolorem similique eligendi reiciendis quam tempora quia obcaecati rerum rem velit quisquam assumenda laborum sequi autem sit sed ipsa tenetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab asperiores minus possimus cum soluta nostrum rem. Hic sequi, facere deserunt minus in saepe labore, temporibus expedita corrupti atque doloribus odit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quo eius assumenda quasi rerum inventore iure eveniet, molestias quas. Ipsam et quae quasi error odit consequuntur, voluptatum corrupti dicta rerum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At repudiandae veniam ex neque delectus dolorum quos voluptatem ut fuga, eaque perferendis recusandae labore rerum, facilis ipsa reiciendis assumenda vitae ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rerum doloribus neque dolorum est perspiciatis laudantium minima, delectus molestias ipsum aliquid aperiam magni repudiandae nam maiores. Ipsam debitis harum vel! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, voluptates dolorem similique eligendi reiciendis quam tempora quia obcaecati rerum rem velit quisquam assumenda laborum sequi autem sit sed ipsa tenetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab asperiores minus possimus cum soluta nostrum rem. Hic sequi, facere deserunt minus in saepe labore, temporibus expedita corrupti atque doloribus odit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quo eius assumenda quasi rerum inventore iure eveniet, molestias quas. Ipsam et quae quasi error odit consequuntur, voluptatum corrupti dicta rerum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At repudiandae veniam ex neque delectus dolorum quos voluptatem ut fuga, eaque perferendis recusandae labore rerum, facilis ipsa reiciendis assumenda vitae ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rerum doloribus neque dolorum est perspiciatis laudantium minima, delectus molestias ipsum aliquid aperiam magni repudiandae nam maiores. Ipsam debitis harum vel! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, voluptates dolorem similique eligendi reiciendis quam tempora quia obcaecati rerum rem velit quisquam assumenda laborum sequi autem sit sed ipsa tenetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab asperiores minus possimus cum soluta nostrum rem. Hic sequi, facere deserunt minus in saepe labore, temporibus expedita corrupti atque doloribus odit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quo eius assumenda quasi rerum inventore iure eveniet, molestias quas. Ipsam et quae quasi error odit consequuntur, voluptatum corrupti dicta rerum.</p>
 </body>
 </html>
