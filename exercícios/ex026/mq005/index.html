@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Catálogo (animes)</a></li>
+                <li><a href="#">Catálogo (produtos)</a></li>
+                <li><a href="#">Notícias Geek</a></li>
+                <li><a href="#">Fale conosco</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Testando Media Queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sapiente ad sequi consequuntur, alias ipsum delectus sint nostrum suscipit. Voluptatem earum dolores quia ipsam porro ad minus repellat, eos nostrum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident autem eligendi et eos iste dolores tempora tenetur aliquid amet? Optio voluptatum voluptate veritatis blanditiis quidem quae consequatur officiis ratione sint.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus alias quia dignissimos sed nam explicabo veritatis dolor, modi, voluptatum quisquam veniam vitae omnis temporibus id ea perspiciatis, eligendi excepturi eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates hic est magni, ad et aperiam laudantium ex distinctio! Labore repellat est similique voluptas consectetur commodi nulla sequi odit omnis deleniti?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque magnam non quas iste ex voluptatum dicta officiis molestiae aliquid harum earum quibusdam saepe odio in provident, voluptates facere culpa vel! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus numquam velit suscipit aperiam commodi vel hic quibusdam fuga ad veniam beatae, nostrum tempore, atque consequatur facere placeat repudiandae? Neque, dolorum.</p>
+        </article>
+    </main>
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>
